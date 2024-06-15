@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejemplo2.CalculadoraAgarPage">
+    <StackLayout Padding="20" BackgroundColor="#D9CCC3">
+        <Label Text="Calculadora de Disoluciones de Agar" FontSize="24" TextColor="#333" HorizontalOptions="Center"/>
+        <BoxView HeightRequest="10" Color="#D9CCC3" /> 
+        <Label Text="Seleccione el tipo de agar:" />
+        <BoxView HeightRequest="10" Color="#D9CCC3" /> 
+        <Picker x:Name="TipoAgarPicker" SelectedIndexChanged="ShowAdditionalFields">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Agar Nutritivo</x:String>
+                    <x:String>Agar Sangre</x:String>
+                    <x:String>Agar MacConkey</x:String>
+                    <x:String>Agar Eosina Azul de Metileno (EMB)</x:String>
+                    <x:String>Agar Salmonella-Shigella (SS)</x:String>
+                    <x:String>Agar Cetrimida</x:String>
+                    <x:String>Agar Sabouraud Dextrosa</x:String>
+                    <x:String>Agar Chocolate</x:String>
+                    <x:String>Agar Endo</x:String>
+                    <x:String>Agar Hektoen Entérico</x:String>
+                    <x:String>Agar Xilosa Lisina Desoxicolato (XLD)</x:String>
+                    <x:String>Agar Baird-Parker</x:String>
+                    <x:String>Agar Manitol Salado</x:String>
+                    <x:String>Agar Kligler</x:String>
+                    <x:String>Agar Citrato de Simmons</x:String>
+                    <x:String>Agar Urea</x:String>
+                    <x:String>Agar Lisina Hierro</x:String>
+                    <x:String>Agar Tioglicolato</x:String>
+                    <x:String>Agar Müller-Hinton</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Label Text="Ingrese el volumen de agua (ml):" />
+        <Entry x:Name="VolumenAguaEntry" Keyboard="Numeric" />
+
+        <StackLayout x:Name="SangreContainer" IsVisible="False">
+            <Label Text="Ingrese la cantidad de sangre (ml):" />
+            <Entry x:Name="SangreEntry" Keyboard="Numeric" />
+        </StackLayout>
+
+        <StackLayout x:Name="UreaContainer" IsVisible="False">
+            <Label Text="Ingrese la cantidad de urea (g):" />
+            <Entry x:Name="UreaEntry" Keyboard="Numeric" />
+        </StackLayout>
+        
+        <Button Text="Calcular" Clicked="CalcularDisolucion" />
+        
+        <StackLayout x:Name="ResultadoContainer" IsVisible="False">
+            <Label x:Name="ResultadoLabel" />
+        </StackLayout>
+        <BoxView HeightRequest="10" Color="#D9CCC3" /> 
+        <Button Text="Volver al inicio" Clicked="OnVolverInicioClicked" />
+    </StackLayout>
+</ContentPage>

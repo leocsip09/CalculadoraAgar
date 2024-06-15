@@ -1,0 +1,11 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejemplo2.MainPage"
+             Title="Agar App">
+    <StackLayout Padding="20" BackgroundColor="#D9CCC3">
+        <Label Text="Pantalla de Inicio" FontSize="24" TextColor="#333" HorizontalOptions="Center"/>
+        <Button Text="Calculadora de Disoluciones de Agar" Clicked="OnCalculadoraAgarClicked" BackgroundColor="#4CAF50" TextColor="White" Margin="0,10,0,0" />
+        <BoxView HeightRequest="10" Color="#D9CCC3" /> 
+        <Button Text="Información sobre Tipos de Agar" Clicked="OnInformacionAgarClicked" BackgroundColor="#4CAF50" TextColor="White" />
+    </StackLayout>
+</ContentPage>

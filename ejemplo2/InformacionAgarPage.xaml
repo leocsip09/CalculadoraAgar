@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejemplo2.InformacionAgarPage">
+    <StackLayout Padding="20" BackgroundColor="#D9CCC3">
+        <Label Text="Información sobre Tipos de Agar" FontSize="24" TextColor="#333" HorizontalOptions="Center"/>
+        <Label Text="Seleccione el tipo de agar:" />
+        <Picker x:Name="InfoTipoAgarPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Agar Nutritivo</x:String>
+                    <x:String>Agar Sangre</x:String>
+                    <x:String>Agar MacConkey</x:String>
+                    <x:String>Agar Eosina Azul de Metileno (EMB)</x:String>
+                    <x:String>Agar Salmonella-Shigella (SS)</x:String>
+                    <x:String>Agar Cetrimida</x:String>
+                    <x:String>Agar Sabouraud Dextrosa</x:String>
+                    <x:String>Agar Chocolate</x:String>
+                    <x:String>Agar Endo</x:String>
+                    <x:String>Agar Hektoen Entérico</x:String>
+                    <x:String>Agar Xilosa Lisina Desoxicolato (XLD)</x:String>
+                    <x:String>Agar Baird-Parker</x:String>
+                    <x:String>Agar Manitol Salado</x:String>
+                    <x:String>Agar Kligler</x:String>
+                    <x:String>Agar Citrato de Simmons</x:String>
+                    <x:String>Agar Urea</x:String>
+                    <x:String>Agar Lisina Hierro</x:String>
+                    <x:String>Agar Tioglicolato</x:String>
+                    <x:String>Agar Müller-Hinton</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <BoxView HeightRequest="10" Color="#D9CCC3" /> 
+        <Button Text="Mostrar Información" Clicked="MostrarInformacion" />
+        <Label x:Name="DescripcionLabel" TextColor="#333" />
+        <BoxView HeightRequest="10" Color="#D9CCC3" /> 
+        <Button Text="Volver al inicio" Clicked="OnVolverInicioClicked" />
+    </StackLayout>
+</ContentPage>
